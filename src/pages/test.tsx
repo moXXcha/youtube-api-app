@@ -1,5 +1,4 @@
 
-import { HomeButton } from "@/components/atoms/HomeButton";
 import React from "react";
 
 const test = () => {
@@ -7,7 +6,7 @@ const test = () => {
 
   return (
     <div>
-      <HomeButton/>
+      test
     </div>
   );
 };
