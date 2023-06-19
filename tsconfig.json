@@ -16,7 +16,7 @@
     "incremental": true,
     "paths": {
       "@/*": ["./src/*"],
-      "@/public": ["./public/*"],
+      "@/public/*": ["./public/*"],
       "@/hooks": ["./src/hooks/*"],
       "@/utils": ["./src/utils/*"],
     }
