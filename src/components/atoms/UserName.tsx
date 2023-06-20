@@ -9,7 +9,7 @@ type Props = {
 const getTextSizeByProps = (size: Size) => {
   switch (size) {
     case "small": {
-      return "text-[8px]";
+      return "text-[12px]";
     }
     case "base": {
       return "text-base opacity-50";
