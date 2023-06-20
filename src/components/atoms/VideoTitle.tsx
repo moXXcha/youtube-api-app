@@ -6,8 +6,8 @@ type Props = {
 
 export const VideoTitle = (props: Props) => {
   return (
-    <div className={props.size === "large" ? "text-3xl" : "text-base"}>
+    <p className={props.size === "large" ? "text-3xl" : "text-base"}>
       寝落ちASMR配信【ぶいすぽっ！ / 橘ひなの】
-    </div>
+    </p>
   );
 };
