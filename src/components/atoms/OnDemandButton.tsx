@@ -4,7 +4,7 @@ import onDemand from "@/public/onDemand.svg";
 
 export const OnDemandButton = () => {
   return (
-    <button className="w-8 h-8 rounded-md0 hover:border">
+    <button className="w-8 h-8 rounded-md hover:border">
       <Image
         src={onDemand}
         width={24}
