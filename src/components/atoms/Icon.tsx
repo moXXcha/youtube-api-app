@@ -2,13 +2,13 @@ import React from "react";
 import Image from "next/image";
 import icon from "@/public/hinano_icon.jpeg";
 
-type Case = "video" | "userCard" | "profile" | "videoPage";
+type Situation = "video" | "userCard" | "profile" | "videoPage";
 type Props = {
-  case: Case;
+  situation: Situation;
 };
 
-const getImageSizeByProps = (variant: Case) => {
-  switch (variant) {
+const getImageSizeByProps = (Situation: Situation) => {
+  switch (Situation) {
     case "video": {
       return 28;
     }
@@ -24,7 +24,7 @@ const getImageSizeByProps = (variant: Case) => {
   }
 };
 export const Icon = (props: Props) => {
-  const imgSize = getImageSizeByProps(props.case);
+  const imgSize = getImageSizeByProps(props.situation);
   return (
     <Image
       src={icon}
