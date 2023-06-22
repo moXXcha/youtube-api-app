@@ -1,9 +1,8 @@
 import React from "react";
 import { SidebarElements } from "../organisms/SidebarElements";
 
-
 type Props = {
-    page?: "player";
+  page?: "player";
 };
 
 export const Sidebar = (props: Props) => {
