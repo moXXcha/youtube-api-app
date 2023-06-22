@@ -8,7 +8,7 @@ import { ChannelSummary } from "../atoms/ChannelSummary";
 
 export const UserCard = () => {
   return (
-    <div className="w-52 h-72 border border-black border-opacity-50 rounded-md flex flex-col items-center">
+    <div className="w-52 h-72 border border-black border-opacity-50 rounded-md flex flex-col items-center cursor-pointer">
       <div className="w-5/6 my-4 space-y-7">
         <Icon situation="userCard" />
         <div>
