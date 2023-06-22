@@ -8,7 +8,7 @@ export const Video = () => {
   return (
     <div className="w-80 h-56 flex flex-col items-center cursor-pointer">
       <div className="w-11/12 mt-2">
-        <div className="w-full h-36 rounded-md relative">
+        <div className="w-full h-40 rounded-md relative">
           <Thumbnail />
         </div>
         <div className="w-full flex">
