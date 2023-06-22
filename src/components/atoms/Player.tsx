@@ -5,8 +5,8 @@ export const Player = () => {
     <div>
       <iframe
         id="player"
-        width={923}
-        height={475}
+        width={1000}
+        height={500}
         src={"https://www.youtube.com/watch?v=S4vM2nkEHmw"}
         allowFullScreen
       />
