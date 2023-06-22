@@ -6,7 +6,7 @@ import { UserName } from "../atoms/UserName";
 
 export const Video = () => {
   return (
-    <div className="w-72 h-56 flex flex-col items-center cursor-pointer">
+    <div className="w-80 h-56 flex flex-col items-center cursor-pointer">
       <div className="w-11/12 mt-2">
         <div className="w-full h-36 rounded-md relative">
           <Thumbnail />
