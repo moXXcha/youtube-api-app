@@ -4,35 +4,23 @@ import { SubscriberCount } from "@/components/atoms/SubscriberCount";
 import { UserId } from "@/components/atoms/UserId";
 import { UserName } from "@/components/atoms/UserName";
 import { VideoTitle } from "@/components/atoms/VideoTitle";
-import { MainContents } from "@/components/templates/MainContents";
-import { SearchArea } from "@/components/templates/SearchArea";
-import { Sidebar } from "@/components/templates/Sidebar";
+import { Layout } from "@/components/templates/Layout";
 import React from "react";
 
 const videoPlayer = () => {
   return (
-    <div>
-      <div className="flex">
-        <Sidebar />
-        <div className="w-10/12 mx-auto">
-          <SearchArea page="player" />
-          <MainContents>
-            <div className="flex justify-center">
-              <div className="">
-                <Player />
-                <div className="w-11/12 mx-auto mt-3">
-                  <VideoTitle size="large" />
-                  <div className="flex mt-3 mb-6">
-                    <Icon situation="videoPage" />
-                    <UserName size="large" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </MainContents>
+    <Layout page="player">
+      <div className="mx-auto w-9/12">
+        <Player />
+        <div className="mt-3 w-fit">
+          <VideoTitle size="large" />
+          <div className="flex mt-3 space-x-4">
+            <Icon situation="videoPage" />
+            <UserName size="large" />
+          </div>
         </div>
       </div>
-    </div>
+    </Layout>
   );
 };
 
