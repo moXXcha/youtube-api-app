@@ -7,7 +7,7 @@ type Props = {
   children: ReactNode;
 };
 export const Layout = (props: Props) => {
-  const style = props.page === "player" || "profile" ? "mt-20" : "mt-32";
+  const style = props.page === "player" || props.page === "profile" ? "mt-20" : "mt-32";
   return (
     <div className="flex">
       <Sidebar page={props.page} />

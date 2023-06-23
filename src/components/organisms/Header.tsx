@@ -14,7 +14,7 @@ export const Header = (props: Props) => {
             <Search />
           </div>
           <div className="mt-5">
-            {props.page === "player" || "profile" ? "" : <ContentsSwitcher />}
+            {props.page === "player" || props.page === "profile" ? "" : <ContentsSwitcher />}
           </div>
         </div>
       </div>
