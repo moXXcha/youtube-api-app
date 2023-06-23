@@ -6,7 +6,7 @@ export const Player = () => {
       <iframe
         id="player"
         width={1000}
-        height={500}
+        height={600}
         src={"https://www.youtube.com/watch?v=S4vM2nkEHmw"}
         allowFullScreen
       />

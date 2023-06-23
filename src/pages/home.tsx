@@ -1,29 +1,15 @@
 import { Video } from "@/components/organisms/Video";
-import { MainContents } from "@/components/templates/MainContents";
-import { SearchArea } from "@/components/templates/SearchArea";
-import { Sidebar } from "@/components/templates/Sidebar";
+import { VideoList } from "@/components/organisms/VideoList";
+import { Layout } from "@/components/templates/Layout";
 import React from "react";
 
 const home = () => {
-  const array = [...Array(20)];
   return (
-    <div>
-      <div>
-        <div className="flex">
-          <Sidebar />
-          <div className="w-10/12 mx-auto">
-            <SearchArea />
-            <MainContents>
-              <div className="flex flex-wrap gap-14">
-                {array.map((_) => (
-                  <Video />
-                ))}
-              </div>
-            </MainContents>
-          </div>
-        </div>
+    <Layout>
+      <div className="w-10/12 mx-auto">
+        <VideoList />
       </div>
-    </div>
+    </Layout>
   );
 };
 
