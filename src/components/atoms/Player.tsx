@@ -1,13 +1,16 @@
-import React from "react";
 
-export const Player = () => {
+type Props = {
+  videoId: string | string[] | undefined
+}
+export const Player = (props: Props) => {
+
   return (
     <div>
       <iframe
         id="player"
         width={1000}
         height={600}
-        src={"https://www.youtube.com/watch?v=S4vM2nkEHmw"}
+        src={"https://www.youtube.com/embed/" + props.videoId}
         allowFullScreen
       />
     </div>

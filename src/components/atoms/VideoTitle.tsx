@@ -2,12 +2,13 @@ import React from "react";
 
 type Props = {
   size: "large" | "base";
+  title: string
 };
 
 export const VideoTitle = (props: Props) => {
   return (
-    <p className={props.size === "large" ? "text-3xl" : "text-base"}>
-      寝落ちASMR配信【ぶいすぽっ！ / 橘ひなの】
+    <p className={`w-full ${props.size === "large" ? "text-3xl" : "text-base"}`}>
+      {props.title}
     </p>
   );
 };

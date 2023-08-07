@@ -7,20 +7,38 @@ import { SubscriberCount } from "../atoms/SubscriberCount";
 import { ChannelSummary } from "../atoms/ChannelSummary";
 import Link from "next/link";
 
-export const UserCard = () => {
+type Data = {
+  thumbnails: {
+    medium: {
+      url: string
+      height: number
+      width: number
+    }
+  }
+  title: string;
+  videoId: string;
+  channelId: string
+  channelTitle: string
+  description: string
+}
+type Props = {
+  data: Data
+}
+export const UserCard = (props: Props) => {
+  const url = "/profile/1" + props.data.channelId
   return (
     <Link
-      href="/profile/1"
+      href={url}
       className="w-52 h-72 border border-black border-opacity-50 rounded-md flex flex-col items-center cursor-pointer"
     >
       <div className="w-5/6 my-4 space-y-7">
-        <Icon situation="userCard" />
+        {/* <Icon situation="userCard" /> */}
         <div>
-          <UserName size="small" />
-          <UserId size="small" />
-          <SubscriberCount size="small" />
+          <UserName size="small" userName={props.data.channelTitle} />
+          {/* <UserId size="small" />
+          <SubscriberCount size="small" /> */}
         </div>
-        <ChannelSummary />
+        <ChannelSummary description={props.data.description}/>
       </div>
     </Link>
   );

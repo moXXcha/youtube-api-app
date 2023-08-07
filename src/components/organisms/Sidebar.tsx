@@ -1,11 +1,10 @@
 import React from "react";
 import { HomeButton } from "../atoms/HomeButton";
-import { OnDemandButton } from "../atoms/OnDemandButton";
-import { LiveButton } from "../atoms/LiveButton";
 import { VideoTypeSwitcher } from "../molecules/VideoTypeSwitcher";
 
 type Props = {
   page?: "player" | "profile";
+  setVideoType: React.Dispatch<React.SetStateAction<string>>
 };
 export const Sidebar = (props: Props) => {
   return (
@@ -16,7 +15,7 @@ export const Sidebar = (props: Props) => {
           ""
         ) : (
           <div className="mt-6">
-            <VideoTypeSwitcher />
+            <VideoTypeSwitcher setVideoType={props.setVideoType} />
           </div>
         )}
       </div>

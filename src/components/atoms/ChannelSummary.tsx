@@ -1,9 +1,12 @@
 import React from "react";
 
-export const ChannelSummary = () => {
+type Props = {
+  description: string
+}
+export const ChannelSummary = (props: Props) => {
   return (
-    <p className="text-[12px]">
-      概要概要概要概要概要概要概要概要概要概要概要概要概要概要概要概要概要概要概要概要概要概要概要概要概要概要概要
+    <p className="text-[12px] w-full break-words">
+      {props.description}
     </p>
   );
 };

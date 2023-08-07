@@ -4,6 +4,7 @@ type Size = "small" | "base" | "large";
 
 type Props = {
   size: Size;
+  userName: string
 };
 
 const getTextSizeByProps = (size: Size) => {
@@ -21,5 +22,5 @@ const getTextSizeByProps = (size: Size) => {
 };
 export const UserName = (props: Props) => {
   const textStyle = getTextSizeByProps(props.size);
-  return <p className={textStyle}>橘ひなの / Hinano Tachibana</p>;
+  return <p className={textStyle}>{props.userName}</p>;
 };
