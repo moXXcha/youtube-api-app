@@ -16,9 +16,9 @@
     "incremental": true,
     "paths": {
       "@/*": ["./src/*"],
-      "@/public": ["./public/*"],
-      "@/hooks": ["./src/hooks/*"],
-      "@/utils": ["./src/utils/*"],
+      "@/public/*": ["./public/*"],
+      "@/hooks/*": ["./src/hooks/*"],
+      "@/utils/*": ["./src/utils/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
