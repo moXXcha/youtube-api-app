@@ -6,7 +6,7 @@ type Props = {
   page?: "player" | "profile";
   children: ReactNode;
   setSearchValue: React.Dispatch<React.SetStateAction<string>>;
-  setVideoType: React.Dispatch<React.SetStateAction<string>>
+  setVideoType: React.Dispatch<React.SetStateAction<string>>;
 };
 export const Layout = (props: Props) => {
   const style =

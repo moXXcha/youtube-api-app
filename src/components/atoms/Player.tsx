@@ -1,9 +1,7 @@
-
 type Props = {
-  videoId: string | string[] | undefined
-}
+  videoId: string | string[] | undefined;
+};
 export const Player = (props: Props) => {
-
   return (
     <div>
       <iframe

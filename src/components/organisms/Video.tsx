@@ -8,22 +8,22 @@ import Link from "next/link";
 type Data = {
   thumbnails: {
     medium: {
-      url: string
-      height: number
-      width: number
-    }
-  }
+      url: string;
+      height: number;
+      width: number;
+    };
+  };
   title: string;
   videoId: string;
-  channelId: string
-  channelTitle: string
-  description: string
-}
+  channelId: string;
+  channelTitle: string;
+  description: string;
+};
 type Props = {
-  data: Data
-}
+  data: Data;
+};
 export const Video = (props: Props) => {
-  const link = "/video/" + props.data.videoId
+  const link = "/video/" + props.data.videoId;
   return (
     <Link
       href={link}
