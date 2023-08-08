@@ -1,19 +1,16 @@
-import { Icon } from "@/components/atoms/Icon";
-import { Player } from "@/components/atoms/Player";
-import { SubscriberCount } from "@/components/atoms/SubscriberCount";
-import { UserId } from "@/components/atoms/UserId";
-import { UserName } from "@/components/atoms/UserName";
-import { VideoTitle } from "@/components/atoms/VideoTitle";
 import { VideoDetail } from "@/components/organisms/VideoDetail";
 import { Layout } from "@/components/templates/Layout";
 import { useRouter } from "next/router";
-import React from "react";
+import React, { useState } from "react";
 
 const videoPlayer = () => {
+  const [searchValue, setSearchValue] = useState<string>("橘ひなの")
+  const [videoType, setVideoType] = useState<string>("")
+
   const router = useRouter();
   const videoId = router.query.videoId;
   return (
-    <Layout page="player">
+    <Layout page="player" setSearchValue={setSearchValue} setVideoType={setVideoType}>
       <VideoDetail videoId={videoId}/>
     </Layout>
   );
