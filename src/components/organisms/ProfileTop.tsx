@@ -9,7 +9,7 @@ export const ProfileTop = () => {
     <div className="flex items-center w-full">
       <Icon situation="profile" />
       <div className="ml-5">
-        <UserName size="large" />
+        <UserName size="large" userName="橘ひなの" />
         <UserId size="base" />
         <SubscriberCount size="base" />
       </div>
