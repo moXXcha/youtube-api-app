@@ -30,14 +30,19 @@ export const UserCardList = (props: Props) => {
     setDatas(test)
   },[test])
 
+  const uniqueDatas = datas.filter((value, index, self) => {
+    const foundIndex = self.findIndex((item) => item.channelId === value.channelId);
+    return foundIndex === index;
+  });
+
   if(!datas || datas.length === 0) {
     return <div>Loading...</div>;
   }
 
   return (
-    <div className="flex flex-wrap justify-between gap-y-7 ">
-      {datas.map((data:Data, index) => (
-        <UserCard data={data} />
+    <div className="flex flex-wrap gap-y-10 gap-x-20 ">
+      {uniqueDatas.map((data:Data, index) => (
+        <UserCard data={data} key={index} />
       ))}
     </div>
   );
