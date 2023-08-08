@@ -24,13 +24,13 @@ type Props = {
 export const UserCardList = (props: Props) => {
   const [datas, setDatas] = useState<Data[]>([]);
 
-  const test = useFetchVideoData(
+  const fetchData = useFetchVideoData(
     `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${props.searchValue}&fields=items(id,snippet(channelId,channelTitle,description))&maxResults=30&order=viewCount&type=video${props.videoType}`
   );
 
   useEffect(() => {
-    setDatas(test);
-  }, [test]);
+    setDatas(fetchData);
+  }, [fetchData]);
 
   const uniqueDatas = datas.filter((value, index, self) => {
     const foundIndex = self.findIndex(
