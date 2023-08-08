@@ -4,7 +4,7 @@ type Size = "small" | "base" | "large";
 
 type Props = {
   size: Size;
-  userName: string
+  userName: string;
 };
 
 const getTextSizeByProps = (size: Size) => {

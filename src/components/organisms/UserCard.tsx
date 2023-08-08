@@ -10,22 +10,22 @@ import Link from "next/link";
 type Data = {
   thumbnails: {
     medium: {
-      url: string
-      height: number
-      width: number
-    }
-  }
+      url: string;
+      height: number;
+      width: number;
+    };
+  };
   title: string;
   videoId: string;
-  channelId: string
-  channelTitle: string
-  description: string
-}
+  channelId: string;
+  channelTitle: string;
+  description: string;
+};
 type Props = {
-  data: Data
-}
+  data: Data;
+};
 export const UserCard = (props: Props) => {
-  const url = "/profile/1" + props.data.channelId
+  const url = "/profile/1" + props.data.channelId;
   return (
     <Link
       href={url}
@@ -38,7 +38,7 @@ export const UserCard = (props: Props) => {
           {/* <UserId size="small" />
           <SubscriberCount size="small" /> */}
         </div>
-        <ChannelSummary description={props.data.description}/>
+        <ChannelSummary description={props.data.description} />
       </div>
     </Link>
   );

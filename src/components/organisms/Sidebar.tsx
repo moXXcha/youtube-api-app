@@ -4,7 +4,7 @@ import { VideoTypeSwitcher } from "../molecules/VideoTypeSwitcher";
 
 type Props = {
   page?: "player" | "profile";
-  setVideoType: React.Dispatch<React.SetStateAction<string>>
+  setVideoType: React.Dispatch<React.SetStateAction<string>>;
 };
 export const Sidebar = (props: Props) => {
   return (
