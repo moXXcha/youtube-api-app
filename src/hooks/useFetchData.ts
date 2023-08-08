@@ -9,8 +9,6 @@ export const useFetchData = (url: string) => {
 
   const { data, error } = useSWR(url, fetcher);
 
-
-
   return {
     contents: data,
     error: error,
