@@ -23,12 +23,12 @@ type Props = {
 
 export const VideoList = (props: Props) => {
   const [datas, setDatas] = useState<Data[]>([]);
-  const test = useFetchVideoData(
+  const fetchData = useFetchVideoData(
     `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${props.searchValue}&fields=items(id,snippet(thumbnails,title,channelTitle))&maxResults=30&order=viewCount&type=video${props.videoType}`
   );
   useEffect(() => {
-    setDatas(test);
-  }, [test]);
+    setDatas(fetchData);
+  }, [fetchData]);
 
   if (!datas || datas.length === 0) {
     return <div>Loading...</div>;
